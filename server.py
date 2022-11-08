@@ -10,8 +10,8 @@ from fastapi.responses import Response
 
 app = FastAPI()
 
-SECRET_KEY = "5f0bb4ac71f76f59d2da01acda08c7569c171225ad2abe12b3b96bb4c9d6572a"
-PASSWORD_SALT = "f7a2e928e00a59cf86c5bb5bbe773dcf50b78f223689d70d58f10479dc584550"
+SECRET_KEY = "Your secret key"
+PASSWORD_SALT = "Your password salt"
 
 def sign_data(data: str) -> str:
     """Возвращает подписанные данные дата"""
@@ -37,12 +37,12 @@ def verify_password(username: str, password: str) -> bool:
 users = {
     "alexey@user.com": {
         "name": "Алексей",
-        "password": "3f9cda2026433c087b49e17d903434d57a0247ec0b3ad2c476039befae491ef3",
+        "password": "user password",
         "balance": 100_000
     },
     "petr@user.com": {
         "name": "Пётр",
-        "password": "45182d7003c3f35c5aab4a7cf76f98929ca75eb210c818dfce3d9061664851b0",
+        "password": "user password",
         "balance": 555_555
     }
 }
